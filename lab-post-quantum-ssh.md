@@ -84,11 +84,29 @@ Follow the steps below to generate the keys:
 
    Jot down the value of the key fingerprint.
 
+1. (Optional) If `~/.ssh` directory does not exist, create this directory with
+   the appropriate permissions to contain SSH client keys.
+
+   ```bash
+   cd ~
+   mkdir .ssh
+   chmod 700 .ssh
+   ```
+
 1. Generate SSH client key pair for `ssh`.
 
    ```bash
-   cd ~/.ssh
+   cd .ssh/
    /opt/pqcee/openssh/bin/ssh-keygen -t ecdsa-sha2-nistp384 -f ./client-ecdsa-p384-key -N ''
+   ```
+
+1. (Optional) If `authorized_keys` file does not exist in the `.ssh` directory,
+   create this file with appropriate permissions to contain list of SSH client
+   public keys authorised for incoming SSH connections.
+
+   ```bash
+   touch authorized_keys
+   chmod 600 authorized_keys
    ```
 
 1. Add SSH client public key to `authorized_keys` file.
