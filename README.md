@@ -8,7 +8,7 @@ secure their communication.
 ## Prerequisites
 
 You should run the workshop on a Ubuntu 22.04 LTS (or later)
-machine. You will also use our pre-compiled `ssh` and `openssl`
+machine. You will use our pre-compiled `ssh` and `openssl`
 libraries - the workshop instructions will also guide you through
 the installation.
 
@@ -99,4 +99,5 @@ debug1: Exit status 0
 
 ### Quantum-secure connection as verified by [PacketQC](https://packetqc.pqcee.com)
 
+<!-- markdownlint-disable-next-line MD001 MD033 -->
 <img width="1677" height="950" alt="image" src="https://github.com/user-attachments/assets/544cd739-24bb-427b-99d7-235fa09174fe" />

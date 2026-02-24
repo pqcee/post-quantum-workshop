@@ -16,7 +16,7 @@ Please follow the instructions below to install pqSSH on your Linux system.
    git clone https://github.com/pqcee/post-quantum-workshop.git
    ```
 
-1. Download `pqSSH_0.6.1_Ubuntu_2204_LTS_x64.tar.gz`, in the
+1. Download `pqSSH_0.6.5_Ubuntu_2204_LTS_x64.tar.gz`, in the
    [Release section](https://github.com/pqcee/post-quantum-workshop/releases) of
    the repository, to your current directory.
 
@@ -32,14 +32,14 @@ Please follow the instructions below to install pqSSH on your Linux system.
    Check ssh client version with `ssh -V` and you should see the following
 
    ```text
-   OpenSSH_10.0p2, OpenSSL 3.5.2 5 Aug 2025
+   OpenSSH_10.2p1, OpenSSL 3.5.5 27 Jan 2026
    ```
 
    Check sshd server version with `/opt/pqcee/openssh/sbin/sshd -V` and you
    should see the same version being reported
 
    ```text
-   OpenSSH_10.0p2, OpenSSL 3.5.2 5 Aug 2025
+   OpenSSH_10.2p1, OpenSSL 3.5.5 27 Jan 2026
    ```
 
 ### Check Support for Quantum-safe Cipher(s)
@@ -52,8 +52,9 @@ ssh -Q kex | grep mlkem
 
 You should see the hybrid post-quantum cipher `mlkem768x25519-sha256`.
 
-**Note**: The newest openSSH v10 does not support ML-DSA. You can check the list
-of supported signature algorithms with `ssh -Q sig`.
+> [!NOTE]
+> The newest openSSH v10 does not support ML-DSA. You can check the list
+> of supported signature algorithms with `ssh -Q sig`.
 
 ## Configure SSH Keys
 
@@ -96,7 +97,7 @@ Follow the steps below to generate the keys:
 1. Generate SSH client key pair for `ssh`.
 
    ```bash
-   cd .ssh/
+   cd ~/.ssh
    /opt/pqcee/openssh/bin/ssh-keygen -t ecdsa-sha2-nistp384 -f ./client-ecdsa-p384-key -N ''
    ```
 
@@ -192,10 +193,10 @@ cipher. We do this as follows
 
 1. Open a web browser and go to [PacketQC](https://packetqc.pqcee.com/).
 
-   1. Click Choose File button. Select `ssh_dump.pcap` file in your Downloads
-      folder and click Open button.
+   1. Click "Choose File" button. Select `ssh_dump.pcap` file in your
+      `Downloads` folder and click Open button.
 
-   1. Click "Generate Security Report" button to process the `PCAP` file.
+   1. Click on "Generate Network Report" to process the `PCAP` file.
 
    1. Click "Security Report" tab. You will observe that the SSH protocol in the
       session is marked green colour, which indicates connection is
@@ -233,6 +234,7 @@ following
    ```bash
    rm package.txt
    rm -rf dropbox
+   rm ssh_dump.pcap
    ```
 
 1. Remove the SSH client key files and remove the last line added to
