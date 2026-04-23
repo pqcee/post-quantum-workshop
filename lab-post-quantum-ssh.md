@@ -32,14 +32,14 @@ Please follow the instructions below to install pqSSH on your Linux system.
    Check ssh client version with `ssh -V` and you should see the following
 
    ```text
-   OpenSSH_10.2p1, OpenSSL 3.5.5 27 Jan 2026
+   OpenSSH_10.3p1, OpenSSL 3.5.6 7 Apr 2026
    ```
 
    Check sshd server version with `/opt/pqcee/openssh/sbin/sshd -V` and you
    should see the same version being reported
 
    ```text
-   OpenSSH_10.2p1, OpenSSL 3.5.5 27 Jan 2026
+   OpenSSH_10.3p1, OpenSSL 3.5.6 7 Apr 2026
    ```
 
 ### Check Support for Quantum-safe Cipher(s)

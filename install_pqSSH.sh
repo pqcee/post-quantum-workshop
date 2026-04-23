@@ -4,14 +4,14 @@
 #
 # To use this script, please
 #
-# 1.  Download "pqSSH_0.6.5_Ubuntu_2204_LTS_x64.tar.gz", in the GitHub
+# 1.  Download "pqSSH_0.6.7_Ubuntu_2204_LTS_x64.tar.gz", in the GitHub
 #     repository's Release section, to your home directory.
 #
 # 2.  Run this script in the same directory as
-#     "pqSSH_0.6.5_Ubuntu_2204_LTS_x64.tar.gz".
+#     "pqSSH_0.6.7_Ubuntu_2204_LTS_x64.tar.gz".
 #
 
-TARBALL="pqSSH_0.6.5_Ubuntu_2204_LTS_x64.tar.gz"
+TARBALL="pqSSH_0.6.7_Ubuntu_2204_LTS_x64.tar.gz"
 INSTALL_DIR="/opt/pqcee"
 SSH_DIR="${INSTALL_DIR}/openssh"
 CLIENT_BIN="${SSH_DIR}/bin"
