@@ -2,7 +2,7 @@ Author: pQCee Pte Ltd
 
 Description : Post Quantum Workshop
 
-Copyright 2025 pQCee Pte Ltd. All rights reserved.
+Copyright 2025-2026 pQCee Pte Ltd. All rights reserved.
 
 "Commons Clause" License Condition v1.0
 
@@ -21,9 +21,13 @@ derives, entirely or substantially, from the functionality of the Software. Any
 license notice or attribution required by the License must also include this
 Commons Clause License Condition notice.
 
-Software: Post Quantum Workshop Lab Materials
+Do not attempt to reverse engineer, disassemble, or decompile any prototypes,
+software, or other items of Confidential Information that are provided here. In
+addition, you agree not to attempt to reconstruct, identify or discover any
+source code, underlying ideas, techniques or algorithms in Confidential
+Information by any means whatever, except as may be specifically authorized in
+advance by pQCee in writing.
 
-License: The MIT License, The 3-Clause BSD License, ISC License, or GNU Lesser
-         General Public License (whichever is relevant)
+Software: Post Quantum Workshop Lab Materials
 
 Licensor: pQCee Pte Ltd
