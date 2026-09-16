@@ -4,14 +4,14 @@
 #
 # To use this script, please
 #
-# 1.  Download "pqSSH_0.6.7_Ubuntu_2204_LTS_x64.tar.gz", in the GitHub
+# 1.  Download "pqSSH_0.6.8_Ubuntu_2204_LTS_x64.tar.gz", in the GitHub
 #     repository's Release section, to your home directory.
 #
 # 2.  Run this script in the same directory as
-#     "pqSSH_0.6.7_Ubuntu_2204_LTS_x64.tar.gz".
+#     "pqSSH_0.6.8_Ubuntu_2204_LTS_x64.tar.gz".
 #
 
-TARBALL="pqSSH_0.6.7_Ubuntu_2204_LTS_x64.tar.gz"
+TARBALL="pqSSH_0.6.8_Ubuntu_2204_LTS_x64.tar.gz"
 INSTALL_DIR="/opt/pqcee"
 SSH_DIR="${INSTALL_DIR}/openssh"
 CLIENT_BIN="${SSH_DIR}/bin"
@@ -20,9 +20,9 @@ CLIENT_BIN="${SSH_DIR}/bin"
 CURRENT_DIR=$(pwd)
 
 # Check if the pqSSH tarball exists
-if [[ ! -f "${TARBALL}" ]]; then
-    echo "File not found: ${TARBALL}"
-    exit 1
+if [[ ! -f ${TARBALL} ]]; then
+	echo "File not found: ${TARBALL}"
+	exit 1
 fi
 
 # Extract the binaries into /opt/pqcee
@@ -36,7 +36,7 @@ sudo rm -rf "./${TARBALL}"
 
 # Return to home directory and add ssh bin paths to bash
 cd "${HOME}" || exit
-echo "export PATH=${CLIENT_BIN}"':$PATH' >> .bashrc
+echo "export PATH=${CLIENT_BIN}"':$PATH' >>.bashrc
 
 # Return to current directory
 cd "${CURRENT_DIR}" || exit
