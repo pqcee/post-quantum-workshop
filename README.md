@@ -29,16 +29,16 @@ user@localmachine:~/dropbox$ scp -vi ~/.ssh/client-ecdsa-p384-key \
   -o PasswordAuthentication=no \
   ./package.txt ${USER}@localhost:~/dropbox
 Executing: program /opt/pqcee/openssh/bin/ssh host localhost, user (unspecified), command sftp
-debug1: OpenSSH_10.0p2, OpenSSL 3.5.2 5 Aug 2025
+debug1: OpenSSH_10.4p1, OpenSSL 3.5.7 9 Jun 2026
 debug1: Reading configuration data /opt/pqcee/openssh/etc/ssh_config
 debug1: Authenticator provider $SSH_SK_PROVIDER did not resolve; disabling
 debug1: Connecting to localhost [::1] port 2222.
 debug1: Connection established.
 debug1: identity file /home/user/.ssh/client-ecdsa-p384-key type 2
 debug1: identity file /home/user/.ssh/client-ecdsa-p384-key-cert type -1
-debug1: Local version string SSH-2.0-OpenSSH_10.0
-debug1: Remote protocol version 2.0, remote software version OpenSSH_10.0
-debug1: compat_banner: match: OpenSSH_10.0 pat OpenSSH* compat 0x04000000
+debug1: Local version string SSH-2.0-OpenSSH_10.4
+debug1: Remote protocol version 2.0, remote software version OpenSSH_10.4
+debug1: compat_banner: match: OpenSSH_10.4 pat OpenSSH* compat 0x04000000
 debug1: Authenticating to localhost:2222 as 'user'
 debug1: SSH2_MSG_KEXINIT sent
 debug1: SSH2_MSG_KEXINIT received

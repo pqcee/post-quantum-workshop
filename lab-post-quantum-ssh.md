@@ -16,7 +16,7 @@ Please follow the instructions below to install pqSSH on your Linux system.
    git clone https://github.com/pqcee/post-quantum-workshop.git
    ```
 
-1. Download `pqSSH_0.6.5_Ubuntu_2204_LTS_x64.tar.gz`, in the
+1. Download `pqSSH_0.6.8_Ubuntu_2204_LTS_x64.tar.gz`, in the
    [Release section](https://github.com/pqcee/post-quantum-workshop/releases) of
    the repository, to your current directory.
 
@@ -32,14 +32,14 @@ Please follow the instructions below to install pqSSH on your Linux system.
    Check ssh client version with `ssh -V` and you should see the following
 
    ```text
-   OpenSSH_10.3p1, OpenSSL 3.5.6 7 Apr 2026
+   OpenSSH_10.4p1, OpenSSL 3.5.7 9 Jun 2026
    ```
 
    Check sshd server version with `/opt/pqcee/openssh/sbin/sshd -V` and you
    should see the same version being reported
 
    ```text
-   OpenSSH_10.3p1, OpenSSL 3.5.6 7 Apr 2026
+   OpenSSH_10.4p1, OpenSSL 3.5.7 9 Jun 2026
    ```
 
 ### Check Support for Quantum-safe Cipher(s)
