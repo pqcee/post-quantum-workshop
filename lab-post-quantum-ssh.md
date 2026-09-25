@@ -3,6 +3,43 @@
 This lab activity will guide you to set up a quantum-safe SSH connection on a
 localhost system. You should run this lab activity on Ubuntu 22.04 LTS or later.
 
+## Environment Pre-requisites for M-series MacBooks
+
+If you are using an ARM-based MacBook, you will need to first create a full
+x86_64 Ubuntu environment inside a lightweight virtual machine on the Mac, then
+execute the lab binaries inside that environment.
+
+The setup instructions are
+
+1. Install Colima and Docker CLI on your MacBook with Homebrew.
+
+   ```bash
+   brew install colima docker
+   ```
+
+1. Start an x86_64 VM with Rosetta support. This tells Colima to create an
+   Intel-architecture VM and use Apple's Rosetta translation layer for speed.
+
+   ```bash
+   colima start --arch x86_64 --vm-type vz --vz-rosetta
+   ```
+
+1. Verify the environment is x86_64.
+
+   ```bash
+   docker run --rm --platform linux/amd64 ubuntu:22.04 uname -m
+   ```
+
+   You should see the output `x86_64`.
+
+1. Log in to an interactive x86_64 Ubuntu container.
+
+   ```bash
+   docker run --rm -it --platform linux/amd64 ubuntu:22.04 bash
+   ```
+
+1. You can now follow the instructions below to begin the lab activity.
+
 ## Install pqSSH
 
 Please follow the instructions below to install pqSSH on your Linux system.
@@ -85,7 +122,7 @@ Follow the steps below to generate the keys:
 
    Jot down the value of the key fingerprint.
 
-1. (Optional) If `~/.ssh` directory does not exist, create this directory with
+1. If `~/.ssh` directory does not exist, create this directory with
    the appropriate permissions to contain SSH client keys.
 
    ```bash
@@ -101,7 +138,7 @@ Follow the steps below to generate the keys:
    /opt/pqcee/openssh/bin/ssh-keygen -t ecdsa-sha2-nistp384 -f ./client-ecdsa-p384-key -N ''
    ```
 
-1. (Optional) If `authorized_keys` file does not exist in the `.ssh` directory,
+1. If `authorized_keys` file does not exist in the `.ssh` directory,
    create this file with appropriate permissions to contain list of SSH client
    public keys authorised for incoming SSH connections.
 
@@ -164,7 +201,7 @@ In the 3rd console tab,
    scp -i ~/.ssh/client-ecdsa-p384-key -P 2222 -o KexAlgorithms=mlkem768x25519-sha256 -o HostKeyAlgorithms=ecdsa-sha2-nistp384 -o PubkeyAcceptedKeyTypes=ecdsa-sha2-nistp384 -o PasswordAuthentication=no ./package.txt ${USER}@localhost:~/dropbox
    ```
 
-1. (Optional) If you are prompted to accept ECDSA key fingerprint, verify that
+1. If you are prompted to accept ECDSA key fingerprint, verify that
    the key fingerprint value matches the value you jotted down earlier, and
    type `yes` and press `Enter` to proceed.
 
