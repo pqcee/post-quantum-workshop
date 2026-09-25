@@ -85,7 +85,7 @@ Follow the steps below to generate the keys:
 
    Jot down the value of the key fingerprint.
 
-1. (Optional) If `~/.ssh` directory does not exist, create this directory with
+1. If `~/.ssh` directory does not exist, create this directory with
    the appropriate permissions to contain SSH client keys.
 
    ```bash
@@ -101,7 +101,7 @@ Follow the steps below to generate the keys:
    /opt/pqcee/openssh/bin/ssh-keygen -t ecdsa-sha2-nistp384 -f ./client-ecdsa-p384-key -N ''
    ```
 
-1. (Optional) If `authorized_keys` file does not exist in the `.ssh` directory,
+1. If `authorized_keys` file does not exist in the `.ssh` directory,
    create this file with appropriate permissions to contain list of SSH client
    public keys authorised for incoming SSH connections.
 
@@ -164,7 +164,7 @@ In the 3rd console tab,
    scp -i ~/.ssh/client-ecdsa-p384-key -P 2222 -o KexAlgorithms=mlkem768x25519-sha256 -o HostKeyAlgorithms=ecdsa-sha2-nistp384 -o PubkeyAcceptedKeyTypes=ecdsa-sha2-nistp384 -o PasswordAuthentication=no ./package.txt ${USER}@localhost:~/dropbox
    ```
 
-1. (Optional) If you are prompted to accept ECDSA key fingerprint, verify that
+1. If you are prompted to accept ECDSA key fingerprint, verify that
    the key fingerprint value matches the value you jotted down earlier, and
    type `yes` and press `Enter` to proceed.
 
